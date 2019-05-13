@@ -9,7 +9,7 @@ Included in this repository are five sketch files, outlined below. The sketch fi
 | Arduino Uno | No | No | No | |
 | | Yes | No | No | No | |
 | | Yes | No | No | Yes | |
-| Arduino Mega | | No | No | No | |
+| Arduino Mega | No | No | No | |
 | | Yes | No | No | No | |
 | | Yes | No | No | Yes | |
 | | No | Yes | No | |

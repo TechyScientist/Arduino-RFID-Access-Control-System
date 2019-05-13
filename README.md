@@ -6,23 +6,23 @@ Included in this repository are five sketch files, outlined below. The sketch fi
 
 | Board | Button? | Keypad? | RGB? | Sketch File |
 | ------- | --------- | --------- | ------ | ------------- |
-| Arduino Uno | Yes | No | No | sketches/RFIDAccessSystemCodeRegular.ino |
-| | No | No | Yes | sketches/RFIDAccessSystemCodeRegularRGB.ino |
-| | Yes | No | Yes | sketches/RFIDAccessSystemCodeRegularRGBButton.ino |
-| Arduino Mega | Yes | No | No | sketches/RFIDAccessSystemCodeRegular.ino |
-| | No | No | Yes | sketches/RFIDAccessSystemCodeRegularRGB.ino |
-| | Yes | No | Yes | sketches/RFIDAccessSystemCodeRegularRGBButton.ino |
-| | Yes | Yes | No | sketches/RFIDAccessSystemCodeMegaKeypad.ino |
-| | Yes | Yes | Yes | sketches/RFIDAccessSystemCodeKeypadRGBBut.ino |
+| Arduino Uno | Yes | No | No | [sketches/RFIDAccessSystemCodeRegular.ino](sketches/RFIDAccessSystemCodeRegular.ino) |
+| | No | No | Yes | [sketches/RFIDAccessSystemCodeRegularRGB.ino](sketches/RFIDAccessSystemCodeRegularRGB.ino) |
+| | Yes | No | Yes | [sketches/RFIDAccessSystemCodeRegularRGBButton.ino](sketches/RFIDAccessSystemCodeRegularRGBButton.ino) |
+| Arduino Mega | Yes | No | No | [sketches/RFIDAccessSystemCodeRegular.ino](sketches/RFIDAccessSystemCodeRegular.ino) |
+| | No | No | Yes | [sketches/RFIDAccessSystemCodeRegularRGB.ino](sketches/RFIDAccessSystemCodeRegularRGB.ino) |
+| | Yes | No | Yes | [sketches/RFIDAccessSystemCodeRegularRGBButton.ino](sketches/RFIDAccessSystemCodeRegularRGBButton.ino) |
+| | Yes | Yes | No | [sketches/RFIDAccessSystemCodeMegaKeypad.ino](sketches/RFIDAccessSystemCodeMegaKeypad.ino) |
+| | Yes | Yes | Yes | [sketches/RFIDAccessSystemCodeKeypadRGBBut.ino](sketches/RFIDAccessSystemCodeKeypadRGBBut.ino) |
 
 ## The Schematics - Fritzing Files
-The schematic diagrams for these were made with Fritzing. The Fritzing files can be found inside the schematics-fritzing/ folder.
+The schematic diagrams for these were made with Fritzing. The Fritzing files can be found inside the [schematics-fritzing/](schematics-fritzing/) folder.
 
 ## The Schematics - PNG Files
-There are also PNG images of the schematics available in the schematics-png/ folder.
+There are also PNG images of the schematics available in the [schematics-png/](schematics-png/) folder.
 
 ## Libraries
-There are two libraries used in this project: Keypad and RFID. The files for both of these libraries are located in the libraries/ folder.
+There are two libraries used in this project: Keypad and RFID. The files for both of these libraries are located in the [libraries/](libraries/) folder.
 
 ## Usage
 1) Determine the board and project you will use. This also determines the components, the schematics, and the sketch that you will use.

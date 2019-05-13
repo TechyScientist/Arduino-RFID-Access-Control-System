@@ -32,7 +32,7 @@ There are two libraries used in this project: Keypad and RFID. The files for bot
 5) Flash the arduino with the appropriate code.
 6) You can see output on both the Serial Monitor (text) and the LED(s) on the breadboard.
 
-## Allowing More RFID Cardsor FOBs or PINs
+## Allowing More RFID Cards, FOBs or PINs
 To allow more cards or FOBs, simply enter their hexadecimal UID (can be retreived from the Serial Monitor) into the array of uids at the top of the sketch and upload to the arduino. Include all spaces, and all letters must be in capitals.
 
 To allow more PINs (systems with a keypad only), add the PIN to the array at the top of the sketch. PINs are 4 digits, with no spaces and all letters in capitals.

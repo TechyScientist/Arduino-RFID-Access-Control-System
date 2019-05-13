@@ -7,11 +7,11 @@ Included in this repository are five sketch files, outlined below. The sketch fi
 | Board | Button? | Keypad? | RGB? | Sketch File |
 | ------- | --------- | --------- | ------ | ------------- |
 | Arduino Uno | No | No | No | |
-| | Yes | No | No | No | |
-| | Yes | No | No | Yes | |
+| | Yes | No | No | |
+| | Yes | No | Yes | |
 | Arduino Mega | No | No | No | |
-| | Yes | No | No | No | |
-| | Yes | No | No | Yes | |
+| | Yes | No | No | |
+| | Yes | No | Yes | |
 | | No | Yes | No | |
 | | No | Yes | Yes | |
 | | Yes | Yes | No | |

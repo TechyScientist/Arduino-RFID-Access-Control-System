@@ -35,4 +35,13 @@ There are two libraries used in this project: Keypad and RFID. The files for bot
 ## Allowing More RFID Cards, FOBs or PINs
 To allow more cards or FOBs, simply enter their hexadecimal UID (can be retreived from the Serial Monitor) into the array of uids at the top of the sketch and upload to the arduino. Include all spaces, and all letters must be in capitals.
 
-To allow more PINs (systems with a keypad only), add the PIN to the array at the top of the sketch. PINs are 4 digits, with no spaces and all letters in capitals.
+To allow more PINs (systems with a keypad only), add the PIN to the array at the top of the sketch. PINs are 4 digits, with no spaces and all letters in capitals. For example, the default uid list in the code is for the cards used for testing. This is shown as 
+
+```c++
+String uid[] = {"7B 90 4E 39", "7C 5A 0D D2"};
+```
+These default uids can be removed, but they show the format required for the uids. Likewise, the keypad-enabled software has a list of acceptable pins, shown as 
+```c++
+String pins[] = {"7B90","7C5A"};
+```
+, which shows the format for the pins.

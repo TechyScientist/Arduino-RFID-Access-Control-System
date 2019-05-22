@@ -13,7 +13,7 @@ Included in this repository are five sketch files, outlined below. The sketch fi
 | | No | No | Yes | [sketches/RFIDAccessSystemCodeMegaRGB.ino](sketches/RFIDAccessSystemCodeMegaRGB.ino) |
 | | Yes | No | Yes | [sketches/RFIDAccessSystemCodeMegaRGBButton.ino](sketches/RFIDAccessSystemCodeMegaRGBButton.ino) |
 | | Yes | Yes | No | [sketches/RFIDAccessSystemCodeMegaKeypad.ino](sketches/RFIDAccessSystemCodeMegaKeypad.ino) |
-| | Yes | Yes | Yes | [sketches/RFIDAccessSystemCodeKeypadRGBBut.ino](sketches/RFIDAccessSystemCodeKeypadRGBBut.ino) |
+| | Yes | Yes | Yes | [sketches/RFIDAccessSystemCodeMegaKeypadRGBBut.ino](sketches/RFIDAccessSystemCodeMegaKeypadRGBBut.ino) |
 
 ## The Schematics - Fritzing Files
 The schematic diagrams for these were made with Fritzing. The Fritzing files can be found inside the [schematics-fritzing/](schematics-fritzing/) folder.

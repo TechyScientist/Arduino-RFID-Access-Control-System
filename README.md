@@ -9,9 +9,9 @@ Included in this repository are five sketch files, outlined below. The sketch fi
 | Arduino Uno | Yes | No | No | [sketches/RFIDAccessSystemCodeRegular.ino](sketches/RFIDAccessSystemCodeRegular.ino) |
 | | No | No | Yes | [sketches/RFIDAccessSystemCodeRegularRGB.ino](sketches/RFIDAccessSystemCodeRegularRGB.ino) |
 | | Yes | No | Yes | [sketches/RFIDAccessSystemCodeRegularRGBButton.ino](sketches/RFIDAccessSystemCodeRegularRGBButton.ino) |
-| Arduino Mega | Yes | No | No | [sketches/RFIDAccessSystemCodeRegular.ino](sketches/RFIDAccessSystemCodeRegular.ino) |
-| | No | No | Yes | [sketches/RFIDAccessSystemCodeRegularRGB.ino](sketches/RFIDAccessSystemCodeRegularRGB.ino) |
-| | Yes | No | Yes | [sketches/RFIDAccessSystemCodeRegularRGBButton.ino](sketches/RFIDAccessSystemCodeRegularRGBButton.ino) |
+| Arduino Mega | Yes | No | No | [sketches/RFIDAccessSystemCodeMega.ino](sketches/RFIDAccessSystemCodeMega.ino) |
+| | No | No | Yes | [sketches/RFIDAccessSystemCodeMegaRGB.ino](sketches/RFIDAccessSystemCodeMegaRGB.ino) |
+| | Yes | No | Yes | [sketches/RFIDAccessSystemCodeMegaRGBButton.ino](sketches/RFIDAccessSystemCodeMegaRGBButton.ino) |
 | | Yes | Yes | No | [sketches/RFIDAccessSystemCodeMegaKeypad.ino](sketches/RFIDAccessSystemCodeMegaKeypad.ino) |
 | | Yes | Yes | Yes | [sketches/RFIDAccessSystemCodeKeypadRGBBut.ino](sketches/RFIDAccessSystemCodeKeypadRGBBut.ino) |
 

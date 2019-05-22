@@ -5,17 +5,17 @@
 #include <SPI.h>
 #include <MFRC522.h>
  
-#define SS_PIN 10
-#define RST_PIN 9
+#define SS_PIN 53
+#define RST_PIN 5 
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance.
  String uid[] = {"7B 90 4E 39", "7C 5A 0D D2"};
- String pins[] = {"7B90","7C5A"};
+ String pins[] = {"1111","7C5A"};
  
- int ledRed = 0;
- int ledBlue = 0;
- int ledGreen = 0;
- int button = 0;
+ int ledRed = 3;
+ int ledBlue = 7; 
+ int ledGreen = 6;
+ int button = 8;
  int buzzer = 4;
  
  byte rowPins[4] = {22,23,24,25};
@@ -41,17 +41,16 @@ void setup()
   pinMode(ledRed, OUTPUT);
   pinMode(ledGreen, OUTPUT);
   pinMode(ledBlue, OUTPUT);
-  pinMode(buzzer, OUTPUT);
-  pinMode(button, INP)
   Serial.begin(9600);   // Initiate a serial communication
   SPI.begin();      // Initiate  SPI bus
   mfrc522.PCD_Init();   // Initiate MFRC522
-  Serial.println("Approximate your card to the reader, or\npress the \'#\' button on the keypad to enter a PIN");
-  RGBWrite(0,0,255);
+  Serial.println("Approximate your card to the reader");
 
 }
-void loop() 
- {
+void loop() {
+   
+  RGBWrite(0,0,255);
+    // Look or new cards
     if(digitalRead(button) == HIGH) {
     Serial.println("Authorized access");
       RGBWrite(0,255,0);
@@ -67,14 +66,16 @@ void loop()
    Serial.print("Enter PIN (End with \'#\'): ");
    int pinLength = 0;
    String pin = "";
-   while(keypad.getKey() != '#') {
-     if(pinLength == 4) break;
-     if(keypad.getKey() != NO_KEY) {
-       pin += keypad.getKey();
-       pinLength++;
-       
-     } 
+   char c = keypad.getKey();
+   while(c != '#') {
+   if(c) {
+     pin += c;
+     pinLength++;
+     Serial.print(c);
    }
+   c = keypad.getKey();
+   }
+   Serial.println();
    bool keyFlag = false;
    for(int i = 0; i < sizeof(pins) / sizeof(pins[0]); i++) {
      if(pin == pins[i]) {
@@ -106,11 +107,8 @@ void loop()
    }
    return;
  }
- else if(keypad.getKey() == NO_KEY) {
-    RGBWrite(0,0,255);
-   
-    // Look for new cards
-   
+ else  {
+     
     if ( ! mfrc522.PICC_IsNewCardPresent()) 
     {
       return;
@@ -140,22 +138,20 @@ void loop()
     {
       
       Serial.println("Authorized access");
-      RGBWrite(0,255,0);
-      tone(buzzer,800);
-      delay(2000);
-      noTone(buzzer);
-      RGBWrite(0,0,255);
-      Serial.println();
-      flag = true;
+       RGBWrite(0,255,0);
+        tone(buzzer,800);
+        delay(2000);
+        noTone(buzzer);
+        RGBWrite(0,0,255);
+        flag = true;
+        Serial.println();
       Serial.println("Approximate your card to the reader, or\npress the \'#\' button on the keypad to enter a PIN");
       break;
     }
     }
-   
-   
-  if(!flag)   {
+    if(!flag) {
       Serial.println(" Access denied");
-       RGBWrite(255,0,0);
+      RGBWrite(255,0,0);
       tone(buzzer,1000);
       delay(300);
       noTone(buzzer);
@@ -165,9 +161,6 @@ void loop()
       RGBWrite(0,0,255);
       Serial.println();
       Serial.println("Approximate your card to the reader, or\npress the \'#\' button on the keypad to enter a PIN");
-   }
- }
- 
-
-  
-} 
+    }
+  }
+ } 

@@ -1,3 +1,6 @@
+// MFRC522 - Version: Latest 
+
+
 // Keypad - Version: Latest 
 // Keypad - Version: 3.1.1
 #include <Keypad.h>
@@ -5,18 +8,18 @@
 #include <SPI.h>
 #include <MFRC522.h>
  
-#define SS_PIN 10
-#define RST_PIN 9
+#define SS_PIN 53
+#define RST_PIN 5
 
 MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance.
  String uid[] = {"7B 90 4E 39", "7C 5A 0D D2"};
  String pins[] = {"7B90","7C5A"};
  
- int blu = 5;
+ int blu = 6;
  int grn = 3;
  int red = 2;
  int buzzer = 4;
- int button = 0;
+ int button = 8;
  
  byte rowPins[4] = {22,23,24,25};
  byte colPins[4] = {26,27,28,29};
@@ -32,14 +35,18 @@ MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance.
  
 void setup() 
 {
+  Serial.begin(9600);
+  Serial.println("DONE");
   pinMode(red, OUTPUT);
   pinMode(blu, OUTPUT);
   pinMode(grn, OUTPUT);
   pinMode(buzzer, OUTPUT);
-  pinMode(button, INPUT);                                                           
-  Serial.begin(9600);   // Initiate a serial communication
+  pinMode(button, INPUT);
+  Serial.println("2");
   SPI.begin();      // Initiate  SPI bus
+  Serial.println("3");
   mfrc522.PCD_Init();   // Initiate MFRC522
+  Serial.println("4");
   Serial.println("Approximate your card to the reader, or press the \'#\' button on the keypad to enter a PIN");
 
 }
